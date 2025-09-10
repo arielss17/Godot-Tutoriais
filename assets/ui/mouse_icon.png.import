@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dec81t3i4hsrm"
-path="res://.godot/imported/tilled_dirt_wide_v2.png-05b00f3ed38b1a07ddb797b5b87572bf.ctex"
+uid="uid://k5pgnwyfal12"
+path="res://.godot/imported/mouse_icon.png-67f27c0f39c79c6579b122cae0d75b42.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/game/tilesets/tilled_dirt_wide_v2.png"
-dest_files=["res://.godot/imported/tilled_dirt_wide_v2.png-05b00f3ed38b1a07ddb797b5b87572bf.ctex"]
+source_file="res://assets/ui/mouse_icon.png"
+dest_files=["res://.godot/imported/mouse_icon.png-67f27c0f39c79c6579b122cae0d75b42.ctex"]
 
 [params]
 

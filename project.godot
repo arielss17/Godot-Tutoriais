@@ -15,6 +15,12 @@ run/main_scene="uid://b7tc66d0p2hu2"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ToolManager="*res://scripts/globals/tool_manager.gd"
+InventoryManager="*res://scripts/globals/inventory_manager.gd"
+DayAndNightCycleManager="*res://scripts/globals/day_and_night_cycle_manager.gd"
+
 [display]
 
 window/size/viewport_width=640
@@ -32,6 +38,11 @@ folder_colors={
 "res://scenes/": "green",
 "res://scripts/": "pink"
 }
+
+[global_group]
+
+navigation_polygon_source_geometry_group=""
+player=""
 
 [input]
 
@@ -64,16 +75,28 @@ hit={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(77, 22),"global_position":Vector2(86, 70),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
+release_tool={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(154, 21),"global_position":Vector2(163, 69),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+remove_dirt={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":true,"meta_pressed":false,"button_mask":1,"position":Vector2(146, 24),"global_position":Vector2(155, 72),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
 
 [layer_names]
 
 2d_physics/layer_1="Ground"
 2d_navigation/layer_1="Chicken navigation"
 2d_physics/layer_2="Player"
+2d_navigation/layer_2="Cow navigation"
 2d_physics/layer_3="Interctable"
 2d_physics/layer_4="Tool"
 2d_physics/layer_5="Object"
 2d_physics/layer_6="Collectable"
+2d_physics/layer_7="NPC"
 
 [rendering]
 

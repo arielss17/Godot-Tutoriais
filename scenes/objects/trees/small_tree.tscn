@@ -24,8 +24,9 @@ size = Vector2(9, 20)
 
 [node name="SmallTree" type="Sprite2D"]
 material = SubResource("ShaderMaterial_skbjc")
-position = Vector2(0, -10)
+position = Vector2(0, -5)
 texture = SubResource("AtlasTexture_xyb6m")
+offset = Vector2(0, -5)
 script = ExtResource("2_g5iuu")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
