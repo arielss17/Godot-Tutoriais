@@ -10,7 +10,6 @@
 [node name="TestSceneDayAndNightCycle" type="Node2D"]
 
 [node name="DayNightCycleComponent" parent="." instance=ExtResource("2_s5uu4")]
-visible = false
 
 [node name="GameTileMap" type="Node2D" parent="."]
 
@@ -28,7 +27,6 @@ position = Vector2(166, 141)
 [node name="GameScreen" parent="." instance=ExtResource("5_5ko52")]
 
 [node name="Corn" parent="." instance=ExtResource("6_s5uu4")]
-y_sort_enabled = true
 position = Vector2(246, 140)
 
 [node name="Tomato" parent="." instance=ExtResource("6_f40v7")]

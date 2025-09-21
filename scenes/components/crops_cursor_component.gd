@@ -5,7 +5,7 @@ extends Node
 @export var grass_tilemap_layer: TileMapLayer
 
 
-@onready var player: Player = get_tree().get_first_node_in_group("player")
+var player: Player
 
 var tomato_plant_scene = preload("res://scenes/objects/plants/tomato.tscn")
 var corn_plant_scene = preload("res://scenes/objects/plants/corn.tscn")
@@ -15,6 +15,10 @@ var cell_position: Vector2i
 var cell_source_id: int
 var local_cell_position: Vector2
 var distance: float
+
+func _ready() -> void:
+	await get_tree().process_frame
+	player = get_tree().get_first_node_in_group("player")
 
 func _unhandled_input(event: InputEvent) -> void:
 	

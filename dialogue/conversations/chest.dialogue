@@ -1,0 +1,21 @@
+~ start_cow_pasture_box
+Baú de Pasto: [[Opa|Eaí|Olá]], suas vacas estão com fome.
+Baú de Pasto: Você quer alimentar as bichinha?
+- Sim
+	Baioman: Mas é craro, bora dá boia pras mimosa.
+	do GameDialogueManager.action_feed_animals()
+- Não
+	Baioman: Moço, elas tá de dieta.
+Baioman: Um baú falante? Acho que o sol queimou minhas ideia... 
+=> END
+
+~ start_chicken_pasture_box
+Baú de Mí: [[Opa|Eaí|Olá]], suas galinhas estão com fome.
+Baú de Mí: Você quer alimentar as galinhas?
+- Sim
+	Baioman: Bora dá mí pras coitada.
+	do GameDialogueManager.action_feed_animals()
+- Não
+	Baioman: Oxe ta doido? Elas ja comeu.
+Baioman: Um baú falante? Acho que o sol queimou minhas ideia... 
+=> END

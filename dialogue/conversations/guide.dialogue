@@ -1,0 +1,13 @@
+~ start
+Jureg: [[Olá|Oi|Opa|Eai]], cê ta bão?
+Jureg: Boas vindas à sua fazenda aqui no meio do nada.
+Jureg: Como você pode ver, as vaca tao tudo com fome e as galinha tao braba.
+Jureg: Você precisa plantar algum trem pra alimentar os bichinho.
+Jureg: Tome, pegue essas sementes.
+- Pegar sementes
+	Baioman: Opa, valeu sô.
+	do GameDialogueManager.action_give_crop_seeds()
+- Recusar
+	Baioman: Cê é fi de quem? Eu nem te conheço.
+
+=> END

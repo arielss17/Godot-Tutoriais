@@ -21,6 +21,7 @@ tile_map_data = PackedByteArray("AAANABIAAQAGAAEAAAANABEAAQABAAEAAAANABAAAQABAAE
 tile_set = ExtResource("1_ctmx0")
 
 [node name="Undergrowth" type="TileMapLayer" parent="GameTileMap"]
+visible = false
 tile_map_data = PackedByteArray("AAASAAYABAAFAAEAAAATAAcABAAGAAEAAAASAAkABAAGAAIAAAAUAAcABAAHAAAAAAAVAAcABAAIAAAAAAA=")
 tile_set = ExtResource("1_ctmx0")
 
@@ -30,6 +31,7 @@ tile_map_data = PackedByteArray("AAAPAA8ABAADAAAAAAAUAA8ABAAIAAIAAAAWAA8ABAAFAAM
 tile_set = ExtResource("1_ctmx0")
 
 [node name="Objects" type="TileMapLayer" parent="GameTileMap"]
+visible = false
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAANAA0ABQAAAAAABgAQAAkABQAAAAAABgASAAwABQAAAAAABgAJAAwABQAAAAAABQAOAAoABQAAAAAABQAJAAcABQAAAAAABQAPAAwABQAAAAAABAAOAAYABQAAAAAABAAKAAkABQAAAAAABAALAAsABQAAAAAABAA=")
 tile_set = ExtResource("1_ctmx0")

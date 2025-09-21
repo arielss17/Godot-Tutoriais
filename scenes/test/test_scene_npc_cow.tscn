@@ -40,6 +40,7 @@ position = Vector2(200, 158)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
 [node name="Cows" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="Cows"]
 position = Vector2(-22, 8)

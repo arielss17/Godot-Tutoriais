@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://cqh63qc6wfhlu"]
+[gd_scene load_steps=55 format=3 uid="uid://cqh63qc6wfhlu"]
 
 [ext_resource type="Script" uid="uid://df7vfwqobcr3v" path="res://scenes/characters/player/player.gd" id="1_6avc5"]
 [ext_resource type="Texture2D" uid="uid://bh6or0shyibst" path="res://assets/game/characters/character_sprites.png" id="1_t61fv"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://bupoc13ikw8qm" path="res://scenes/characters/player/tilling_state.gd" id="8_xuses"]
 [ext_resource type="Script" uid="uid://btegqqbvt1nwy" path="res://scenes/characters/player/watering_state.gd" id="9_42irl"]
 [ext_resource type="PackedScene" uid="uid://cueni2vfq8ui0" path="res://scenes/components/hit_component.tscn" id="10_3xnwo"]
+[ext_resource type="PackedScene" uid="uid://c2ubuxvxsemy3" path="res://scenes/components/interactable_label_component.tscn" id="11_djydg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hss88"]
 atlas = ExtResource("1_t61fv")
@@ -452,3 +453,9 @@ current_tool = 1
 [node name="HitComponentCollisionShape2D" type="CollisionShape2D" parent="HitComponent"]
 shape = SubResource("CircleShape2D_djydg")
 debug_color = Color(0.749569, 0.421212, 0.499171, 0.42)
+
+[node name="InteractableLabelComponent" parent="." instance=ExtResource("11_djydg")]
+offset_left = -9.0
+offset_top = -35.0
+offset_right = 9.0
+offset_bottom = -17.0

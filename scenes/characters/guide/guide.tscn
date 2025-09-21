@@ -1,0 +1,60 @@
+[gd_scene load_steps=10 format=3 uid="uid://bj0jfvhr0f8"]
+
+[ext_resource type="Script" uid="uid://ckat1mx1oixih" path="res://scenes/characters/guide/guide.gd" id="1_pdv8u"]
+[ext_resource type="Shader" uid="uid://7oixsycqyr4v" path="res://scenes/characters/guide/replace_color.gdshader" id="1_rl4q2"]
+[ext_resource type="Texture2D" uid="uid://b7idc8ygpghu2" path="res://assets/game/characters/basic_character_sprites.png" id="2_g6y3g"]
+[ext_resource type="PackedScene" uid="uid://b3ohbfks8y4y" path="res://scenes/components/InteractableComponent.tscn" id="3_g6y3g"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yvxhl"]
+shader = ExtResource("1_rl4q2")
+shader_parameter/original_0 = Color(0.360784, 0.305882, 0.572549, 1)
+shader_parameter/original_1 = Color(0.462745, 0.427451, 0.666667, 1)
+shader_parameter/original_2 = Color(0.866667, 0.835294, 0.870588, 1)
+shader_parameter/original_3 = Color(0.917647, 0.882353, 0.470588, 1)
+shader_parameter/replace_0 = Color(0.567333, 0.284858, 0.384031, 1)
+shader_parameter/replace_1 = Color(0.660162, 0.309931, 0.391359, 1)
+shader_parameter/replace_2 = Color(0.533542, 0.361523, 0.535465, 1)
+shader_parameter/replace_3 = Color(0.430359, 0.686331, 0.800327, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdv8u"]
+atlas = ExtResource("2_g6y3g")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnx84"]
+atlas = ExtResource("2_g6y3g")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xo3ut"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdv8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnx84")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yvxhl"]
+radius = 18.0
+
+[node name="Guide" type="Node2D"]
+script = ExtResource("1_pdv8u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_yvxhl")
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_xo3ut")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.370955
+
+[node name="InteractableComponent" parent="." instance=ExtResource("3_g6y3g")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_yvxhl")
+debug_color = Color(0.437448, 0.561004, 0.587118, 0.42)
